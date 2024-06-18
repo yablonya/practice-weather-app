@@ -1,22 +1,17 @@
 "use client";
 
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styles from "./MainBlock.module.scss";
 import Image from "next/image";
+import TempCard from "@/components/temp-card/TempCard";
+import {dateTimeFormatting} from "@/utils";
+import useDateTime from "@/utils/useDateTime";
 
 const MainBlock = () => {
-  const [currentDate, setCurrentDate] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentDate(new Date());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const {day, month, year} = useDateTime();
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.header}>
         <form action="#">
           <input type="search" placeholder="Enter the location" required/>
@@ -25,7 +20,7 @@ const MainBlock = () => {
           </button>
         </form>
         <p>
-          {currentDate.getDate()}.{currentDate.getMonth()}.{currentDate.getFullYear()}
+          {dateTimeFormatting(day)}.{dateTimeFormatting(month)}.{year}
         </p>
       </div>
 
@@ -44,6 +39,15 @@ const MainBlock = () => {
             90%
           </div>
         </div>
+      </div>
+
+      <div className={styles.weeklyForecast}>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
       </div>
 
     </div>

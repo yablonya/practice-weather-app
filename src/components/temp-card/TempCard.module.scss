@@ -1,0 +1,30 @@
+.card {
+  width: fit-content;
+  padding: 22px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 3px solid #d1d1d1;
+  border-radius: 18px;
+
+  h5 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 0 6px 0;
+  }
+
+  div {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: #6b6b6b;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    color: #bdbdbd;
+    font-weight: 500;
+    margin: 0;
+  }
+}
