@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './DetailsBlock.module.scss'
 import Image from "next/image";
 import TempCard from "@/components/temp-card/TempCard";
@@ -12,25 +12,37 @@ const DetailsBlock = () => {
   return (
     <div className={styles.container}>
       <div className={styles.details}>
-        <h2>Good Morning</h2>
-        <h2>
-          {dateTimeFormatting(hours)}:{dateTimeFormatting(minutes)}
-        </h2>
-        <div className={styles.currentWeather}>
-          <div>20&deg;</div>
-          <div>
+        <div>
+          <h2>
+            Good
+            {
+              hours < 5 ? ' Night' :
+                hours < 12 ? ' Morning' :
+                  hours < 18 ? ' Afternoon' : ' Evening'
+            }
+          </h2>
+          <h2>
+            {dateTimeFormatting(hours)}:{dateTimeFormatting(minutes)}
+          </h2>
+        </div>
+
+        <div>
+          <div className={styles.currentWeather}>
+            <div>20&deg;</div>
             <div>
-              <Image src="/images/windy.png" alt="Wind" width={20} height={20}/>
-              6.3 mph
-            </div>
-            <div>
-              <Image src="/images/drop.png" alt="Drop" width={20} height={20}/>
-              90%
+              <div>
+                <Image src="/images/windy.png" alt="Wind" width={20} height={20}/>
+                6.3 mph
+              </div>
+              <div>
+                <Image src="/images/drop.png" alt="Drop" width={20} height={20}/>
+                90%
+              </div>
             </div>
           </div>
+          <div className={styles.additionalInfo}>Feels like 19&deg;</div>
+          <div className={styles.additionalInfo}>Cloudy</div>
         </div>
-        <div className={styles.additionalInfo}>Feels like 19&deg;</div>
-        <div className={styles.additionalInfo}>Cloudy</div>
       </div>
 
       <div className={styles.hourlyForecast}>

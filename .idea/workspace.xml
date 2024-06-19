@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="">
+    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="added details panel with hourly forecast and created custom hook for date and time">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Sass File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -106,8 +109,16 @@
       <updated>1718627766524</updated>
       <workItem from="1718627767985" duration="3769000" />
       <workItem from="1718716230458" duration="1000000" />
-      <workItem from="1718717781663" duration="5815000" />
+      <workItem from="1718717781663" duration="17124000" />
     </task>
+    <task id="LOCAL-00001" summary="added details panel with hourly forecast and created custom hook for date and time">
+      <created>1718723948668</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718723948668</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,5 +134,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added details panel with hourly forecast and created custom hook for date and time" />
+    <option name="LAST_COMMIT_MESSAGE" value="added details panel with hourly forecast and created custom hook for date and time" />
   </component>
 </project>
