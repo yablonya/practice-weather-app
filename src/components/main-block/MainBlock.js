@@ -4,12 +4,14 @@ import React, {useState} from 'react';
 import styles from "./MainBlock.module.scss";
 import Image from "next/image";
 import TempCard from "@/components/temp-card/TempCard";
-import {dateTimeFormatting} from "@/utils";
-import useDateTime from "@/utils/useDateTime";
+import {dateTimeFormatting, getWeatherByCode} from "@/libs/utils";
+import useDateTime from "@/hooks/useDateTime";
+import {useForecastContext} from "@/hooks/ForecastContext";
 
 const MainBlock = () => {
-  const {day, month, year} = useDateTime();
+  const {day, date, month, year} = useDateTime();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const forecastObject = useForecastContext();
 
   const handleClick = () => {
     setIsModalOpen(!isModalOpen);
@@ -49,34 +51,43 @@ const MainBlock = () => {
           <Image src="/images/search.png" alt="Search" width={20} height={20}/>
         </button>
         <p>
-          {dateTimeFormatting(day)}.{dateTimeFormatting(month)}.{year}
+          {dateTimeFormatting(date)}.{dateTimeFormatting(month)}.{year}
         </p>
       </div>
 
       <div className={styles.generalInfo}>
         <div className={styles.leftBlock}>
-          20&deg;
+          {Math.round(forecastObject.currentWeather.temp)}&deg;
         </div>
         <div className={styles.rightBlock}>
           <div>
             <img className={styles.windIcon} src="/images/windy.png" alt="Wind"/>
-            mph
+            {forecastObject.currentWeather.windSpeed} mps
           </div>
           <div>
             <img className={styles.humidityIcon} src="/images/drop.png" alt="Drop"/>
-            90%
+            {forecastObject.currentWeather.relativeHum}%
           </div>
         </div>
-        <h2>Cloudy</h2>
+        <h2>{getWeatherByCode(forecastObject.currentWeather.weather)}</h2>
       </div>
 
       <div className={styles.weeklyForecast}>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
-        <TempCard day={'Today'} temp={20} weather={'Sunny'}/>
+        <TempCard
+          variant='day'
+          day={day}
+          temp={forecastObject.currentWeather.temp}
+          weatherCode={forecastObject.currentWeather.weather}
+        />
+        {forecastObject.weekHourly.map((weekDay, index) => (
+          <TempCard
+            key={index}
+            variant='day'
+            day={day + index + 1}
+            temp={weekDay.temp[11]}
+            weatherCode={weekDay.weather[11]}
+          />
+        ))}
       </div>
 
     </div>

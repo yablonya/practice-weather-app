@@ -1,5 +1,6 @@
 .card {
-  padding: 22px 32px;
+  width: 150px;
+  padding: 22px 15px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -25,13 +26,15 @@
     color: #b8b8b8;
     font-weight: 500;
     margin: 0;
+    white-space: break-spaces;
   }
 }
 
 @media screen and (max-width: 576px) {
   .card {
-    padding: 16px 24px;
+    padding: 16px 12px;
     gap: 12px;
+    width: 135px;
 
     h5 {
       font-size: 18px;

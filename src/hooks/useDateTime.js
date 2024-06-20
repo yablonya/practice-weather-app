@@ -14,9 +14,11 @@ const useDateTime = () => {
   return {
     hours: currentDate.getHours(),
     minutes: currentDate.getMinutes(),
-    day: currentDate.getDate(),
+    day: currentDate.getDay(),
+    date: currentDate.getDate(),
     month: currentDate.getMonth(),
-    year: currentDate.getFullYear()
+    year: currentDate.getFullYear(),
+    timezoneOffset: -(currentDate.getTimezoneOffset() / 60)
   }
 }
 

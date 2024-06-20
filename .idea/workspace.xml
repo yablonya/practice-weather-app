@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="added details panel with hourly forecast and created custom hook for date and time">
+    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="added responsiveness to the whole page">
+      <change afterPath="$PROJECT_DIR$/src/libs/utils/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/temp-card/TempCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/temp-card/TempCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/useDateTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDateTime.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Sass File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,27 +48,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yablonya/Documents/GitHub/practice-weather-app&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/yablonya/Documents/GitHub/practice-weather-app",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yablonya\Documents\GitHub\practice-weather-app\src" />
+      <recent name="C:\Users\yablonya\Documents\GitHub\practice-weather-app\src\libs" />
+      <recent name="C:\Users\yablonya\Documents\GitHub\practice-weather-app\src\libs\hooks" />
+      <recent name="C:\Users\yablonya\Documents\GitHub\practice-weather-app\src\libs\api" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
@@ -109,7 +117,7 @@
       <updated>1718627766524</updated>
       <workItem from="1718627767985" duration="3769000" />
       <workItem from="1718716230458" duration="1000000" />
-      <workItem from="1718717781663" duration="17124000" />
+      <workItem from="1718717781663" duration="37160000" />
     </task>
     <task id="LOCAL-00001" summary="added details panel with hourly forecast and created custom hook for date and time">
       <created>1718723948668</created>
@@ -118,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718723948668</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added responsiveness to the whole page">
+      <created>1718815110574</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718815110574</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added details panel with hourly forecast and created custom hook for date and time" />
-    <option name="LAST_COMMIT_MESSAGE" value="added details panel with hourly forecast and created custom hook for date and time" />
+    <MESSAGE value="added responsiveness to the whole page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added responsiveness to the whole page" />
   </component>
 </project>
