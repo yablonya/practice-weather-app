@@ -65,17 +65,34 @@
 
 .hourlyForecast {
   padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 
   h3 {
     font-size: 26px;
     font-weight: 700;
     text-align: center;
     width: 100%;
-    margin: 25px 0 5px;
+    margin: 25px 0 25px;
+  }
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 37vh;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-thumb {
+      background: #6b6b6b;
+      border-radius: 3px;
+      opacity: 0.5
+    }
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 6px;
+    }
   }
 }
 
@@ -83,6 +100,7 @@
   .container {
     width: 100%;
     padding: 45px 35px;
+    margin-bottom: 40px;
   }
 
   .details {

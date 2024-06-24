@@ -6,7 +6,7 @@ export function dateTimeFormatting(num) {
 
 export function forecastDataFormatting(forecastData) {
   const { timezoneOffset } = useDateTime();
-  const daysNum = 5;
+  const daysNum = 6;
   const forecastObject = {
     currentWeather: {},
     weekHourly: []

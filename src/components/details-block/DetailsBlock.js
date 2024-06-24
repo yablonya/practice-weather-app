@@ -10,9 +10,28 @@ import {useForecastContext} from "@/hooks/ForecastContext";
 
 const DetailsBlock = () => {
   const { hours, minutes } = useDateTime();
-  const forecastObject = useForecastContext();
+  const { forecastObject, selectedDay } = useForecastContext();
+  const currWeather = forecastObject.currentWeather;
+
+  const renderHourlyForecast = () => {
+    if (!forecastObject.weekHourly[selectedDay]) return null;
+
+    const startHour = selectedDay === 0 ? hours : 0;
+    const endHour = 23;
+
+    return forecastObject.weekHourly[selectedDay].temp.slice(startHour, endHour + 1).map((temp, index) => (
+      <TempCard
+        key={index}
+        variant='hour'
+        hour={startHour + index}
+        temp={temp}
+        weatherCode={forecastObject.weekHourly[selectedDay].weather[startHour + index]}
+      />
+    ));
+  };
 
   return (
+    forecastObject.weekHourly.length !== 0 &&
     <div className={styles.container}>
       <div className={styles.details}>
         <div>
@@ -31,38 +50,32 @@ const DetailsBlock = () => {
 
         <div>
           <div className={styles.currentWeather}>
-            <div>{forecastObject ? forecastObject.currentWeather.temp : '--'}&deg;</div>
+            <div>{currWeather.temp}&deg;</div>
             <div>
               <div>
                 <Image src="/images/windy.png" alt="Wind" width={20} height={20}/>
-                {forecastObject ? forecastObject.currentWeather.windSpeed : '--'} mph
+                {currWeather.windSpeed} mph
               </div>
               <div>
                 <Image src="/images/drop.png" alt="Drop" width={20} height={20}/>
-                {forecastObject ? forecastObject.currentWeather.relativeHum : '--'}%
+                {currWeather.relativeHum}%
               </div>
             </div>
           </div>
           <div className={styles.additionalInfo}>
-            Feels like {forecastObject ? forecastObject.currentWeather.apparentTemp : '--'}&deg;
+            Feels like {currWeather.apparentTemp}&deg;
           </div>
           <div className={styles.additionalInfo}>
-            {forecastObject ? getWeatherByCode(forecastObject.currentWeather.weather) : '--'}
+            {getWeatherByCode(currWeather.weather)}
           </div>
         </div>
       </div>
 
       <div className={styles.hourlyForecast}>
         <h3>Hourly Forecast</h3>
-        {forecastObject.weekHourly[0] && forecastObject.weekHourly[0].temp.slice(hours, 23).map((num, index) => (
-          <TempCard
-            key={index}
-            variant='hour'
-            hour={hours + index + 1}
-            temp={num}
-            weatherCode={forecastObject.weekHourly[0].weather[hours + index - 1]}
-          />
-        ))}
+        <div>
+          {renderHourlyForecast()}
+        </div>
       </div>
     </div>
   );
