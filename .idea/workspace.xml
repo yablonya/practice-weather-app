@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="connected to openmeteo api and configured forecast context">
+    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="added loader svg and completed whole site except cities search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details-block/DetailsBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/temp-card/TempCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/temp-card/TempCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/temp-card/TempCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/ForecastContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/ForecastContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useDateTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDateTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/utils/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +109,7 @@
       <workItem from="1718716230458" duration="1000000" />
       <workItem from="1718717781663" duration="37937000" />
       <workItem from="1719162071392" duration="7610000" />
-      <workItem from="1719252087819" duration="4485000" />
+      <workItem from="1719252087819" duration="5299000" />
     </task>
     <task id="LOCAL-00001" summary="added details panel with hourly forecast and created custom hook for date and time">
       <created>1718723948668</created>
@@ -141,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718907084278</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added loader svg and completed whole site except cities search">
+      <created>1719256876219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719256876219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +160,7 @@
     <MESSAGE value="added details panel with hourly forecast and created custom hook for date and time" />
     <MESSAGE value="added responsiveness to the whole page" />
     <MESSAGE value="connected to openmeteo api and configured forecast context" />
-    <option name="LAST_COMMIT_MESSAGE" value="connected to openmeteo api and configured forecast context" />
+    <MESSAGE value="added loader svg and completed whole site except cities search" />
+    <option name="LAST_COMMIT_MESSAGE" value="added loader svg and completed whole site except cities search" />
   </component>
 </project>
