@@ -7,16 +7,25 @@ import TempCard from "@/components/temp-card/TempCard";
 import {dateTimeFormatting, getWeatherByCode} from "@/libs/utils";
 import useDateTime from "@/hooks/useDateTime";
 import {useForecastContext} from "@/hooks/ForecastContext";
+import SearchBox from "@/components/search-box/SearchBox";
 
 const MainBlock = () => {
   const {dayNum, date, month, year} = useDateTime();
+  const { forecastObject, curLocation, setCurLocation } = useForecastContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { forecastObject } = useForecastContext();
+  const [selectedLocation, setSelectedLocation] = useState(curLocation);
+
   const currWeather = forecastObject.currentWeather;
 
   const handleClick = () => {
     setIsModalOpen(!isModalOpen);
   }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setCurLocation(selectedLocation);
+    setIsModalOpen(false);
+  }
+
 
   return (
     forecastObject.weekHourly.length === 0 ?
@@ -27,11 +36,14 @@ const MainBlock = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <div
-            className={styles.formBlock}
+            className={styles.mobileFormBlock}
             style={{top: isModalOpen ? '0' : '-100px'}}
           >
-            <form>
-              <input type="search" placeholder="Enter the location" required />
+            <form onSubmit={handleSubmit}>
+              <SearchBox
+                selectedLoc={selectedLocation}
+                setSelectedLoc={setSelectedLocation}
+              />
               <button type='submit'>
                 <Image src="/images/search.png" alt="Search" width={20} height={20}/>
               </button>
@@ -46,8 +58,11 @@ const MainBlock = () => {
             onClick={handleClick}
           ></div>
 
-          <form>
-            <input type="search" placeholder="Enter the location" required />
+          <form onSubmit={handleSubmit}>
+            <SearchBox
+              selectedLoc={selectedLocation}
+              setSelectedLoc={setSelectedLocation}
+            />
             <button type='submit'>
               <Image src="/images/search.png" alt="Search" width={20} height={20}/>
             </button>

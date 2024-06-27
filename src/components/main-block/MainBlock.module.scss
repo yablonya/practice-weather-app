@@ -27,13 +27,12 @@
 
   form {
     display: flex;
-    width: fit-content;
     align-items: center;
     position: relative;
     z-index: 101;
 
     input {
-      max-width: 250px;
+      max-width: 300px;
       padding: 2px 10px;
       border: none;
       outline: none;
@@ -85,7 +84,7 @@
   transition: opacity 0.3s ease;
 }
 
-.formBlock {
+.mobileFormBlock {
   background-color: #f4f4f4;
   height: 100px;
   position: absolute;
@@ -101,11 +100,19 @@
   form {
     width: 100%;
 
-    input {
-      max-width: none;
+    div:nth-child(2) {
       width: 100%;
+
+      input {
+        max-width: none;
+        width: 100%;
+      }
     }
   }
+}
+
+.pac-container {
+  width: 600px;
 }
 
 .generalInfo {
@@ -168,10 +175,8 @@
     width: 100%;
   }
 
-  .header {
-    p {
-      margin: 0;
-    }
+  .header p {
+    margin: 0;
   }
 
   .generalInfo {

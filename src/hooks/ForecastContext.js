@@ -7,11 +7,24 @@ import useDateTime from "@/hooks/useDateTime";
 const ForecastContext = createContext(null);
 
 export const ForecastContextProvider = ({ children }) => {
-  const forecastObject = useForecast();
+  const [curLocation, setCurLocation] = useState({
+    name: 'Kyiv, Ukraine',
+    latitude: 50.4503596,
+    longitude: 30.5245025,
+  });
+  const forecastObject = useForecast(curLocation.latitude, curLocation.longitude);
   const [selectedDay, setSelectedDay] = useState(0);
 
   return (
-    <ForecastContext.Provider value={{ forecastObject, selectedDay, setSelectedDay }}>
+    <ForecastContext.Provider
+      value={{
+        forecastObject,
+        selectedDay,
+        setSelectedDay,
+        curLocation,
+        setCurLocation
+      }}
+    >
       {children}
     </ForecastContext.Provider>
   );

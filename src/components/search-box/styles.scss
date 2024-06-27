@@ -1,0 +1,14 @@
+.pac-item {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.pac-item-query {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) {
+  .pac-item, .pac-item-query {
+    font-size: 16px;
+  }
+}
