@@ -25,7 +25,7 @@ const SearchBox = ({ selectedLoc, setSelectedLoc }) => {
 
   return (
     <LoadScript
-      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY}
+      googleMapsApiKey={"AIzaSyAnJfOWa6rlN569JdeEPGToXMYrZdzQ_SI"}
       libraries={['places']}
     >
       <Autocomplete

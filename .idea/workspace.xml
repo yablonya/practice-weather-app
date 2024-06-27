@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="set default location if current user location is unavailable">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-block/MainBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/ForecastContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/ForecastContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForecast.js" afterDir="false" />
-    </list>
+    <list default="true" id="0f89fbcc-524f-4c13-a618-5c18a705756f" name="Changes" comment="added google places autocomplete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +110,7 @@
       <workItem from="1719252087819" duration="5800000" />
       <workItem from="1719414901349" duration="702000" />
       <workItem from="1719416105957" duration="101000" />
-      <workItem from="1719483821373" duration="16013000" />
+      <workItem from="1719483821373" duration="16088000" />
     </task>
     <task id="LOCAL-00001" summary="added details panel with hourly forecast and created custom hook for date and time">
       <created>1718723948668</created>
@@ -155,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719259841692</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added google places autocomplete">
+      <created>1719500132835</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719500132835</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +177,7 @@
     <MESSAGE value="connected to openmeteo api and configured forecast context" />
     <MESSAGE value="added loader svg and completed whole site except cities search" />
     <MESSAGE value="set default location if current user location is unavailable" />
-    <option name="LAST_COMMIT_MESSAGE" value="set default location if current user location is unavailable" />
+    <MESSAGE value="added google places autocomplete" />
+    <option name="LAST_COMMIT_MESSAGE" value="added google places autocomplete" />
   </component>
 </project>
